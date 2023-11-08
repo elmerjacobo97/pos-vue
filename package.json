@@ -12,8 +12,11 @@
   "dependencies": {
     "@formkit/themes": "^1.2.2",
     "@formkit/vue": "^1.2.2",
+    "@heroicons/vue": "^2.0.18",
     "firebase": "^10.5.2",
     "pinia": "^2.1.7",
+    "sweetalert2": "^11.9.0",
+    "uid": "^2.0.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
     "vuefire": "^3.1.17"

@@ -13,6 +13,7 @@ export default {
         amber: '#fbbf24', // Versiones alternativas de alertas, botones con atención cautelar
         red: '#DC2626', // Errores, advertencias críticas
         rose: '#f43f5e', // Mensajes importantes, íconos de error secundario
+        'light-red': '#F7B2B7', // Mensajes de advertencia, íconos de error primario
         'cool-gray': '#9CA3AF', // Textos secundarios, íconos, bordes sutiles
         'warm-gray': '#F5F5F4' // Fondo de secciones especiales, tarjetas
       }
