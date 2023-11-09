@@ -12,7 +12,7 @@ const products = useProductsStore()
 
   <p v-if="products.noResults" class="text-cool-gray font-black text-2xl">No hay resultados</p>
 
-  <ul v-else role="list" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+  <ul v-else role="list" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 pb-5">
     <ProductList
       v-for="product in products.productsCollection"
       :key="product.id"

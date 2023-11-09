@@ -15,7 +15,8 @@ export default {
         rose: '#f43f5e', // Mensajes importantes, íconos de error secundario
         'light-red': '#F7B2B7', // Mensajes de advertencia, íconos de error primario
         'cool-gray': '#9CA3AF', // Textos secundarios, íconos, bordes sutiles
-        'warm-gray': '#F5F5F4' // Fondo de secciones especiales, tarjetas
+        'warm-gray': '#F5F5F4', // Fondo de secciones especiales, tarjetas
+        'radio-selected': '#FBBF24'
       }
     }
   },

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useFirestore, useCollection, useFirebaseStorage } from 'vuefire'
 import {
   collection,
@@ -19,6 +19,7 @@ import Swal from 'sweetalert2'
 export const useProductsStore = defineStore('products', () => {
   const db = useFirestore()
   const storage = useFirebaseStorage()
+  const selectedCategory = ref(1)
 
   const q = query(collection(db, 'products'), orderBy('availability')) // where('category', '==', 3)  limit(10)
   const productsCollection = useCollection(q)
@@ -80,10 +81,17 @@ export const useProductsStore = defineStore('products', () => {
 
   const noResults = computed(() => productsCollection.value.length === 0)
 
+  const filteredProducts = computed(() => {
+    return productsCollection.value.filter((product) => product.category === selectedCategory.value)
+  })
+
   return {
     noResults,
     productsCollection,
     categoryOptions,
+    filteredProducts,
+    selectedCategory,
+    categories,
     createProduct,
     updateProduct,
     deleteProduct
