@@ -3,6 +3,7 @@ import MainNav from '@/components/MainNav.vue'
 import { useProductsStore } from '@/stores/products'
 import { storeToRefs } from 'pinia'
 import ProductCard from '@/components/ProductCard.vue'
+import ShoppingCart from '@/components/ShoppingCart.vue'
 
 const products = useProductsStore()
 const { filteredProducts, noResults } = storeToRefs(products) // Evitar romper la reactividad
@@ -20,8 +21,8 @@ const { filteredProducts, noResults } = storeToRefs(products) // Evitar romper l
         <ProductCard v-for="product in filteredProducts" :key="product.id" :product="product" />
       </div>
     </div>
-    <aside class="lg:w-1/3 lg:h-screen lg:overflow-y-scroll pt-10 pb-32 px-10">
-      <p>Carrito aqui</p>
+    <aside class="lg:w-1/3 lg:h-screen lg:overflow-y-scroll py-28 md:py-20 px-10">
+      <ShoppingCart />
     </aside>
   </main>
 </template>

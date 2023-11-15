@@ -1,9 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,vue}', './formkit.config.js'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx,vue}',
+    './formkit.config.js',
+    './node_modules/vue-tailwind-datepicker/**/*.js'
+  ],
   theme: {
     extend: {
       colors: {
+        'vtd-primary': colors.blue, // Light mode Datepicker color
+        // 'vtd-secondary': colors.gray, // Dark mode Datepicker color
         'bone-white': '#FAF9F6', // Fondo general, UI ligera
         blue: '#2563EB', // Botones primarios, enlaces
         'light-blue': '#bfdbfe', // Fondo de botones secundarios, indicadores de estado

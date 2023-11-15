@@ -31,7 +31,7 @@ const products = useProductsStore()
       </div>
     </div>
     <nav>
-      <NavLink to="admin">Administrar</NavLink>
+      <NavLink to="sales">Administrar</NavLink>
     </nav>
   </header>
 </template>

@@ -2,18 +2,24 @@
 import { formatCurrency } from '@/helpers'
 import { PencilSquareIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { useProductsStore } from '@/stores/products'
+import { computed } from 'vue'
 
-defineProps({
+const props = defineProps({
   product: {
     type: Object
   }
 })
 
 const products = useProductsStore()
+
+const isNotProductAvailable = computed(() => {
+  return props.product.availability === 0
+})
 </script>
 
 <template>
   <li
+    :class="{ 'opacity-30': isNotProductAvailable }"
     class="relative flex items-center space-x-6 border border-warm-gray p-5 bg-bone-white shadow-lg rounded-lg"
   >
     <!-- Imagen con etiqueta 'Nuevo' absolutamente posicionada en su esquina superior derecha -->
